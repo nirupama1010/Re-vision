@@ -1,0 +1,52 @@
+{
+	"info": {
+		"_postman_id": "2bd30538-c6a0-435b-9b12-c8b128a89af5",
+		"name": "RoutingService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20896896"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9294/Parameters/GetPrograms",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"To Check weather we have received the exact status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"  pm.expect(pm.response.code).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"To Check weather we have received the exact status code\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9294/Parameters/GetPrograms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9294",
+					"path": [
+						"Parameters",
+						"GetPrograms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
